@@ -40,6 +40,7 @@
         NSString *bundlePath = [resourcePath stringByAppendingPathComponent:@"RS3DSegmentedControl.bundle"];
         NSString *imagePath = [bundlePath stringByAppendingPathComponent:@"RS3DSegmentedControlBg.png"];
         self.backgroundImage = [[UIImageView alloc] initWithImage:[[UIImage imageWithContentsOfFile:imagePath] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 10, 0, 10)]];
+        self.backgroundImage.contentMode = UIViewContentModeScaleToFill;
         
         [self addSubview:_backgroundImage];
         
