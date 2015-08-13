@@ -30,6 +30,19 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder 
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+
+        [self initWithFrame:[self frame]];
+
+        NSLog (@"view: %f", self.frame.size.width);   
+        NSLog (@"view: %f", self.bounds.size.width); 
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
